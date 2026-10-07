@@ -1,0 +1,17 @@
+# Local editor and OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.tmp
+
+# Local tools, previews, verification and secrets (none are needed by the site)
+node_modules/
+work/
+verification/
+.impeccable/
+.env
+.env.*
+!.env.example

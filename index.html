@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- BRAND: search for "Half Story" across this file, README.md and assets/favicon.svg to rename. -->
+  <title>Half Story — AI Continuity &amp; Worldbuilding for Long-Form Fiction</title>
+  <meta name="description" content="Half Story is an early-stage AI-assisted platform exploring semantic story search, continuity checking, structured worldbuilding and long-context analysis for long-form fiction authors.">
+  <meta name="theme-color" content="#090a10">
+  <meta name="robots" content="index, follow">
+  <!-- Published site URL. Keep canonical, og:url and script.js CONFIG in sync. -->
+  <link rel="canonical" href="https://adelin23.github.io/half-story/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Half Story">
+  <meta property="og:title" content="Half Story — Remember Every Detail of Your Story Universe">
+  <meta property="og:description" content="An early-stage student project exploring AI-assisted continuity, semantic search and worldbuilding for long-form fiction.">
+  <meta property="og:url" content="https://adelin23.github.io/half-story/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Half Story — Remember Every Detail of Your Story Universe">
+  <meta name="twitter:description" content="An early-stage student project exploring AI-assisted continuity, semantic search and worldbuilding for long-form fiction.">
+  <!-- Original favicon. Replace assets/favicon.svg here if a new project icon is created. -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Original, shared stroke icons; decorative uses are hidden from assistive technology. -->
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5m0-5-9 9m0-9H5v14h14v-5"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14"/></symbol>
+      <symbol id="i-nodes" viewBox="0 0 24 24"><circle cx="5" cy="6" r="2.5"/><circle cx="18" cy="5" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="m7.5 6 8-1M6 8l5 8m6-9-4 9"/></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2m1-15a3 3 0 0 1 0 6m3 9v-2a6 6 0 0 0-3-5"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-time" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 4v5c0 4-4 7-8 9-4-2-8-5-8-9V7l8-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8l-5-5Zm0 0v5h5M8 12h8m-8 4h6"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+      <symbol id="i-warning" viewBox="0 0 24 24"><path d="m12 3 10 18H2L12 3Zm0 6v5m0 3v.2"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8l10-5Zm-10 10 10 5 10-5M2 18l10 5 10-5"/></symbol>
+      <symbol id="i-path" viewBox="0 0 24 24"><circle cx="5" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 5h7a4 4 0 0 1 0 8h-4a3 3 0 0 0 0 6h7"/></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 20c-4 1-4-2-6-2m12 4v-4c0-1-.2-2-1-2 4-.5 6-2 6-6 0-1.5-.5-2.5-1-3 .1-1 .1-2-.5-3-1-.1-2 .5-3 1a12 12 0 0 0-7 0c-1-.5-2-1.1-3-1-.6 1-.6 2-.5 3-.5.5-1 1.5-1 3 0 4 2 5.5 6 6-.8.5-1 1-1 2v4"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <div class="container nav-wrap">
+      <a class="wordmark" href="#product" aria-label="Half Story home"><span class="brand-symbol" aria-hidden="true"><span></span><span></span></span><span>Half<span class="wordmark-light"> Story</span></span></a>
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+      <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+        <a href="#product">Product</a><a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#technology">Technology</a><a href="#about">About</a>
+        <!-- Repository links are configured here and in script.js CONFIG. -->
+        <a href="https://github.com/Adelin23/half-story" data-github>GitHub<svg class="icon icon-small" aria-hidden="true"><use href="#i-external"/></svg></a>
+        <a class="button button-nav" href="#status">View Project<svg class="icon icon-small" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="product" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-eyebrow"><span class="status-dot" aria-hidden="true"></span>AI for long-form storytelling<span class="eyebrow-divider" aria-hidden="true"></span><span>Early prototype</span></div>
+        <h1 id="hero-title">Keep your story universe<br class="desktop-break"> <span>consistent,</span> no matter how<br class="desktop-break"> large it becomes.</h1>
+        <p class="hero-description">Half Story is an early-stage AI-assisted platform for long-form fiction authors, designed to understand story canon across hundreds of chapters, track complex worldbuilding, identify continuity problems, and help authors plan what comes next.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#features">Explore the concept<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="button button-secondary" href="https://github.com/Adelin23/half-story" data-github><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View on GitHub</a></div>
+        <p class="hero-note">Your imagination writes the story. Give it a place to remember.</p>
+
+        <div class="dashboard-shell reveal">
+          <div class="dashboard-top"><div class="dashboard-brand"><span class="mini-mark" aria-hidden="true">H</span>Half Story<span class="dashboard-divider" aria-hidden="true"></span><span class="dashboard-project">The Eastern Expedition</span></div><span class="concept-label"><span aria-hidden="true"></span>Concept interface</span></div>
+          <div class="dashboard-layout">
+            <aside class="dashboard-sidebar" aria-label="Illustrative dashboard sidebar">
+              <p class="sidebar-label">WORKSPACE</p>
+              <ul class="sidebar-items">
+                <li class="selected"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg>Overview</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg>Characters</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Locations</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-time"/></svg>Timeline</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg>Relationships</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Lore</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Continuity</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Search</li>
+              </ul>
+              <div class="sidebar-bottom"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span>One world.<br><strong>Every detail connected.</strong></span></div>
+            </aside>
+            <div class="dashboard-main">
+              <div class="dashboard-heading"><div><p class="ui-overline">YOUR MANUSCRIPT, CONNECTED</p><h2>Story Universe</h2></div><span class="sample-pill">Fictional sample</span></div>
+              <dl class="dashboard-stats"><div><dt><svg class="icon" aria-hidden="true"><use href="#i-people"/></svg>Characters</dt><dd>124</dd></div><div><dt><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Locations</dt><dd>38</dd></div><div><dt><svg class="icon" aria-hidden="true"><use href="#i-time"/></svg>Events</dt><dd>215</dd></div></dl>
+              <div class="dashboard-workspace">
+                <div class="canon-panel">
+                  <div class="panel-heading"><h3>Connected canon</h3><span>Illustrative relationships</span></div>
+                  <div class="canon-map" role="img" aria-label="Fictional story map: Elena and Marcus share the eastern expedition, which connects to Valenport and the destroyed old bridge.">
+                    <div class="map-orbit orbit-one" aria-hidden="true"></div><div class="map-orbit orbit-two" aria-hidden="true"></div>
+                    <span class="map-line line-a" aria-hidden="true"></span><span class="map-line line-b" aria-hidden="true"></span><span class="map-line line-c" aria-hidden="true"></span><span class="map-line line-d" aria-hidden="true"></span>
+                    <div class="map-node node-elena"><span class="node-avatar violet">E</span><span><strong>Elena</strong><small>Character</small></span></div>
+                    <div class="map-node node-marcus"><span class="node-avatar blue">M</span><span><strong>Marcus</strong><small>Character</small></span></div>
+                    <div class="map-node node-center"><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg><span><strong>Eastern expedition</strong><small>Story event · Ch. 18–26</small></span></div>
+                    <div class="map-node node-valenport"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Valenport</strong><small>Location</small></span></div>
+                    <div class="map-node node-bridge"><svg class="icon" aria-hidden="true"><use href="#i-time"/></svg><span><strong>The old bridge</strong><small>Historical event</small></span></div>
+                  </div>
+                  <div class="map-legend"><span><i class="legend-dot purple" aria-hidden="true"></i>Characters</span><span><i class="legend-dot blue-dot" aria-hidden="true"></i>Locations</span><span><i class="legend-dot pale" aria-hidden="true"></i>Events</span></div>
+                </div>
+                <div class="dashboard-activity">
+                  <div class="activity-conflict"><div class="activity-kicker"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Recent continuity check</div><h3>Possible conflict detected</h3><p>Elena’s account of Valenport may contradict Chapter 18.</p><a href="#continuity-demo">Inspect the example<svg class="icon icon-small" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+                  <div class="activity-event"><div class="activity-kicker"><svg class="icon" aria-hidden="true"><use href="#i-time"/></svg>Timeline event</div><p><strong>The expedition reaches Valenport.</strong><span>Chapter 18 · Eastern coast</span></p></div>
+                  <div class="activity-event"><div class="activity-kicker"><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg>Character relationship</div><p><strong>Elena &amp; Marcus</strong><span>Travel companions · First met in Raul</span></p></div>
+                </div>
+              </div>
+              <div class="world-rule"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><span><strong>World rule</strong> · The northern gates close at the first snowfall.</span><span class="world-rule-source">Lore · Chapter 07</span></div>
+            </div>
+          </div>
+          <p class="dashboard-caption">Concept interface with fictional manuscript data. Counts illustrate a story universe, not Half Story usage.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem-section section" aria-labelledby="problem-title">
+      <div class="container problem-layout">
+        <div class="section-intro reveal"><h2 id="problem-title">Long stories become<br> difficult to remember.</h2><p>A detail in chapter seven can change everything in chapter seventy.</p></div>
+        <div class="problem-content reveal"><p>As a universe grows, so does everything an author needs to hold together. Notes, documents and spreadsheets can become increasingly difficult to search and maintain.</p><ul class="memory-list"><li>Character histories &amp; relationships</li><li>Locations &amp; chronology</li><li>Factions &amp; political structures</li><li>Technology &amp; world rules</li><li>Previous promises &amp; foreshadowing</li><li>Historical events &amp; old details</li></ul><p class="problem-close">The story moves forward. Its memory should come with it.</p></div>
+      </div>
+    </section>
+
+    <section class="features-section section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-heading reveal"><div><h2 id="features-title">A memory layer for<br> your story universe.</h2><p>Six capabilities being explored. One connected picture of your world.</p></div><span class="outlined-label">Planned capabilities</span></div>
+        <div class="feature-grid">
+          <article class="feature-card reveal"><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg></div><h3>Story Knowledge Base</h3><p>Organize characters, locations, factions, relationships, events and world rules into structured information extracted from the manuscript.</p><div class="feature-mini entity-mini" aria-hidden="true"><span>Elena</span><i></i><span>Valenport</span><i></i><span>Ch. 18</span></div></article>
+          <article class="feature-card reveal"><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></div><h3>Continuity Checking</h3><p>Compare new writing against established canon and surface possible contradictions or inconsistencies before they become part of the story.</p><div class="feature-mini check-mini" aria-hidden="true"><span class="mini-check"></span><span>New chapter</span><i></i><span>Established canon</span></div></article>
+          <article class="feature-card reveal"><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div><h3>Semantic Story Search</h3><p>Search by meaning rather than exact keywords and ask questions about information scattered across many chapters.</p><div class="feature-mini query-mini"><svg class="icon icon-small" aria-hidden="true"><use href="#i-search"/></svg><span>“Where did Elena first meet Marcus?”</span></div></article>
+          <article class="feature-card reveal"><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-time"/></svg></div><h3>Timeline Intelligence</h3><p>Track events chronologically and help identify conflicting dates, impossible ages and inconsistent sequences of events.</p><div class="feature-mini timeline-mini" aria-hidden="true"><span>Ch. 07</span><i></i><span>Ch. 18</span><i></i><span>Ch. 26</span></div></article>
+          <article class="feature-card reveal"><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div><h3>Long-Context Analysis</h3><p>Analyze large portions of a manuscript and connect information written far apart in the story.</p><div class="feature-mini context-mini" aria-hidden="true"><span>Chapter 1</span><i></i><span>…</span><i></i><span>Chapter 100</span></div></article>
+          <article class="feature-card reveal"><div class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-path"/></svg></div><h3>Story Planning</h3><p>Explore possible future chapters, character arcs and events while keeping ideas grounded in established canon.</p><div class="feature-mini planning-mini" aria-hidden="true"><span>Canon</span><svg class="icon icon-small"><use href="#i-arrow"/></svg><span>What comes next?</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section section" id="how-it-works" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading centered reveal"><h2 id="process-title">From manuscript to<br> living story knowledge.</h2><p>The proposed workflow, from your first chapter to the next idea.</p></div>
+        <ol class="process-list">
+          <li class="reveal"><div class="process-top"><span class="step-number">01</span><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><h3>Import</h3><p>Add chapters or other story material.</p></li>
+          <li class="reveal"><div class="process-top"><span class="step-number">02</span><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></div><h3>Understand</h3><p>Half Story is designed to identify characters, locations, events, relationships and important world rules.</p></li>
+          <li class="reveal"><div class="process-top"><span class="step-number">03</span><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg></div><h3>Connect</h3><p>Story information would become an interconnected, searchable knowledge base.</p></li>
+          <li class="reveal"><div class="process-top"><span class="step-number">04</span><svg class="icon" aria-hidden="true"><use href="#i-path"/></svg></div><h3>Assist</h3><p>Authors could search their universe, investigate inconsistencies and plan future chapters.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="demo-section section" id="continuity-demo" aria-labelledby="continuity-title">
+      <div class="container demo-layout">
+        <div class="demo-copy reveal"><h2 id="continuity-title">Catch contradictions<br> before your readers do.</h2><p>A new line can disagree with a detail written months ago. The aim is to connect the two, show the source, and leave the creative decision with you.</p><div class="demo-note"><span class="status-dot" aria-hidden="true"></span>Concept demonstration · No live AI analysis</div></div>
+        <div class="continuity-window reveal">
+          <div class="window-title"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>Continuity review</span><span class="sample-pill">Fictional example</span></div>
+          <div class="chapter-entry"><span class="entry-label">NEW CHAPTER</span><blockquote>“Elena tells Marcus that she has never visited Valenport.”</blockquote></div>
+          <div class="canon-entry"><span class="entry-label">ESTABLISHED CANON <span>· Chapter 18</span></span><blockquote>“Chapter 18 records Elena spending three weeks in Valenport during the eastern expedition.”</blockquote></div>
+          <div class="conflict-result"><svg class="icon" aria-hidden="true"><use href="#i-warning"/></svg><div><h3>Possible continuity conflict</h3><p>Half Story found an earlier event that may contradict the new chapter.</p><span class="result-caption">Illustrative result, written for this demonstration.</span></div></div>
+          <div class="demo-controls"><button class="text-button" type="button" data-disclosure="source-detail" aria-controls="source-detail" aria-expanded="false">View source<svg class="icon icon-small" aria-hidden="true"><use href="#i-file"/></svg></button><button class="text-button muted-button" type="button" data-disclosure="context-detail" aria-controls="context-detail" aria-expanded="false">Review context<svg class="icon icon-small" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          <div class="demo-detail" id="source-detail" hidden><strong>Chapter 18 · A city on the eastern coast</strong><p>“For three weeks, Elena called Valenport home while the expedition waited for safe passage.”</p><span>Fictional source passage for this concept.</span></div>
+          <div class="demo-detail" id="context-detail" hidden><strong>An author’s judgment still matters.</strong><p>Elena could be concealing the visit, referring to another time, or speaking unreliably. A potential conflict should prompt a review, not an automatic rewrite.</p></div>
+          <noscript><p class="noscript-note">Source example: Elena stayed in Valenport for three weeks in Chapter 18. Context: the statement could be deliberate concealment; an author would review it.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section section" id="search-demo" aria-labelledby="search-title">
+      <div class="container demo-layout search-layout">
+        <div class="search-window reveal">
+          <div class="window-title"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><span>Search your story</span><span class="sample-pill">Concept demonstration</span></div>
+          <form class="story-search" id="story-search"><label class="visually-hidden" for="story-query">Choose or enter a fictional example question</label><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><input id="story-query" name="query" type="text" value="What happened to the expedition before they reached Raul?" autocomplete="off" aria-describedby="search-help"><button type="submit" aria-label="Show fictional example results"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></form>
+          <p class="search-help" id="search-help">Explore three prewritten examples. This is not a live search.</p>
+          <div class="query-presets" role="group" aria-label="Fictional search examples"><button type="button" data-query="expedition" aria-pressed="true">The expedition</button><button type="button" data-query="meeting" aria-pressed="false">Elena &amp; Marcus</button><button type="button" data-query="bridge" aria-pressed="false">The old bridge</button></div>
+          <p class="search-status" id="search-status" role="status">3 fictional passages · Different chapters, connected context</p>
+          <div class="search-results" data-results="expedition">
+            <article class="search-result"><span class="chapter-number">12</span><div><h3>The crossing at Ashmere</h3><p>The expedition lost its supply wagons when the river rose overnight. Elena led the group onto the old eastern road.</p><span>Chapter 12 · Event</span></div></article>
+            <article class="search-result"><span class="chapter-number">14</span><div><h3>A warning from the northern colonies</h3><p>A courier warned that the mountain pass had closed, forcing the expedition south toward Valenport.</p><span>Chapter 14 · Location &amp; lore</span></div></article>
+            <article class="search-result"><span class="chapter-number">18</span><div><h3>Three weeks in Valenport</h3><p>Elena and the expedition waited for safe passage before continuing inland to Raul.</p><span>Chapter 18 · Character &amp; timeline</span></div></article>
+          </div>
+          <div class="search-results" data-results="meeting" hidden><article class="search-result"><span class="chapter-number">03</span><div><h3>The first meeting in Raul</h3><p>Elena met Marcus in the mapmaker’s workshop, where both were looking for a route across the eastern coast.</p><span>Chapter 03 · Character relationship</span></div></article><article class="search-result"><span class="chapter-number">09</span><div><h3>An agreement to travel together</h3><p>After leaving Raul, Elena and Marcus agreed to join the eastern expedition.</p><span>Chapter 09 · Event</span></div></article></div>
+          <div class="search-results" data-results="bridge" hidden><article class="search-result"><span class="chapter-number">11</span><div><h3>The old bridge falls</h3><p>A winter flood destroyed the old bridge at Ashmere, cutting off the direct route to the northern colonies.</p><span>Chapter 11 · Historical event</span></div></article><article class="search-result"><span class="chapter-number">12</span><div><h3>A different way across</h3><p>With the bridge gone, the expedition attempted the lower crossing and lost its supply wagons.</p><span>Chapter 12 · Consequence</span></div></article></div>
+          <noscript><p class="noscript-note">The default fictional results are visible. Enable JavaScript to switch between the three prepared examples.</p></noscript>
+        </div>
+        <div class="demo-copy reveal"><h2 id="search-title">Find the connection.<br> Not just the keyword.</h2><p>Your question may span several chapters. Semantic search is being explored as a way to bring related passages together, with sources you can return to.</p><ul class="example-questions"><li>“What do we know about the northern colonies?”</li><li>“When was the old bridge destroyed?”</li></ul><div class="demo-note"><span class="status-dot" aria-hidden="true"></span>Fictional results · Authored for this page</div></div>
+      </div>
+    </section>
+
+    <section class="ai-section section" id="ai" aria-labelledby="ai-title">
+      <div class="container ai-panel reveal">
+        <div class="ai-copy"><div class="ai-emblem" aria-hidden="true"><svg class="icon"><use href="#i-spark"/></svg></div><h2 id="ai-title">Designed around<br> long-context AI</h2><p>Half Story is being designed around modern large language models, with Claude being evaluated for long-context story analysis, structured information extraction, semantic retrieval, continuity checking and author-assistance workflows.</p><span class="evaluation-label">Claude is being evaluated for the prototype.</span></div>
+        <div class="ai-uses"><h3>Potential AI workflows</h3><ul><li><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Analyze long collections of chapters</li><li><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg>Extract structured story information</li><li><svg class="icon" aria-hidden="true"><use href="#i-time"/></svg>Connect distant story events</li><li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>Check new writing against established canon</li><li><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Answer questions about the manuscript</li><li><svg class="icon" aria-hidden="true"><use href="#i-path"/></svg>Assist with future story planning</li></ul><p>These are proposed uses, not a completed production integration. Half Story is an independent project with no claimed affiliation with or endorsement from Anthropic.</p></div>
+      </div>
+    </section>
+
+    <section class="technology-section section" id="technology" aria-labelledby="technology-title">
+      <div class="container technology-layout">
+        <div class="technology-copy reveal"><h2 id="technology-title">Exploring the technology<br> behind story intelligence.</h2><p>A manuscript needs more than a chat window. The prototype explores how language understanding, retrieval and structured knowledge could work together.</p><ul class="technology-tags" aria-label="Technologies and concepts being explored"><li>Large Language Models</li><li>Claude API</li><li>Retrieval-Augmented Generation</li><li>Vector Search</li><li>Embeddings</li><li>Structured Extraction</li><li>Knowledge Graphs</li><li>Semantic Search</li><li>Long-Context Processing</li></ul><p class="architecture-disclaimer">Architecture is currently being explored and may evolve during prototype development.</p></div>
+        <figure class="architecture reveal"><figcaption><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg>Prototype architecture<span>Conceptual flow</span></figcaption><ol class="architecture-flow"><li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Manuscript</li><li>Story ingestion</li><li>AI extraction</li><li class="architecture-core"><svg class="icon" aria-hidden="true"><use href="#i-nodes"/></svg>Structured story knowledge</li><li>Vector search + knowledge graph</li><li>Claude / AI reasoning layer</li><li class="architecture-output"><span>Continuity</span><span>Search</span><span>Planning</span></li></ol></figure>
+      </div>
+    </section>
+
+    <section class="origin-section section" aria-labelledby="origin-title">
+      <div class="container origin-layout reveal"><div class="origin-symbol" aria-hidden="true"><span class="brand-symbol"><span></span><span></span></span><div class="origin-rings"></div><span class="origin-caption">Every world starts<br> with a story.</span></div><div><h2 id="origin-title">Built from a real<br> long-form storytelling problem.</h2><p>Half Story began as an attempt to manage the growing complexity of an original long-form web novel. As characters, locations, technologies, political systems, timelines and historical events accumulated, maintaining a consistent internal canon became increasingly difficult.</p><p>The project explores how AI, semantic retrieval and structured knowledge systems can help long-form authors understand and manage their fictional universes.</p></div></div>
+    </section>
+
+    <section class="about-section section" id="about" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <div class="about-copy reveal"><h2 id="about-title">Student-built in Romania.</h2><p>Half Story is an early-stage independent software project created by <strong>Adelin Toader</strong>, a Computer Engineering student in Romania. The project is currently in concept and prototype development.</p><p class="about-principle">A real writing problem. A focused engineering project.<br> A prototype built one step at a time.</p></div>
+        <dl class="project-card reveal"><div><dt>Project</dt><dd class="project-name">Half Story</dd></div><div><dt>Stage</dt><dd><span class="status-dot" aria-hidden="true"></span>Early prototype</dd></div><div><dt>Type</dt><dd>Independent student project</dd></div><div><dt>Focus</dt><dd>AI + long-form fiction</dd></div><div><dt>Location</dt><dd>Romania</dd></div></dl>
+      </div>
+    </section>
+
+    <section class="status-section section" id="status" aria-labelledby="status-title">
+      <div class="container">
+        <div class="section-heading reveal"><div><h2 id="status-title">Currently in development.</h2><p>Half Story is currently at an early prototype stage. The immediate goal is to build a working system capable of importing chapters, extracting structured story knowledge, searching the resulting canon and identifying basic continuity conflicts.</p></div><span class="status-badge"><span class="status-dot" aria-hidden="true"></span>Early prototype</span></div>
+        <ol class="roadmap reveal"><li class="current"><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-status">Current</span><h3>Concept and architecture</h3><p>Define the story model and prototype workflow.</p></li><li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-status">Planned · Next</span><h3>Manuscript ingestion</h3><p>Bring chapters into the system.</p></li><li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-status">Planned</span><h3>Story entity extraction</h3><p>Identify the people, places and rules.</p></li><li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-status">Planned</span><h3>Semantic search</h3><p>Retrieve canon by meaning.</p></li><li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-status">Future</span><h3>Continuity analysis</h3><p>Surface potential contradictions.</p></li><li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-status">Future</span><h3>Author dashboard</h3><p>Connect the workflow in one workspace.</p></li><li><span class="roadmap-dot" aria-hidden="true"></span><span class="roadmap-status">Future</span><h3>Private prototype testing</h3><p>Evaluate and refine the early system.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="cta-section section" aria-labelledby="cta-title"><div class="container cta-panel reveal"><span class="brand-symbol" aria-hidden="true"><span></span><span></span></span><h2 id="cta-title">Building a better memory<br> for fictional worlds.</h2><p>Half Story is currently being developed as an independent student project exploring how AI can help authors manage increasingly complex long-form stories.</p><div class="hero-actions"><a class="button button-primary" href="https://github.com/Adelin23/half-story" data-github><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>View on GitHub<svg class="icon icon-small" aria-hidden="true"><use href="#i-external"/></svg></a><a class="button button-secondary" href="#status">Project status<svg class="icon icon-small" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="wordmark" href="#product"><span class="brand-symbol" aria-hidden="true"><span></span><span></span></span><span>Half<span class="wordmark-light"> Story</span></span></a><p>AI-powered continuity and worldbuilding<br> for long-form fiction.</p></div><nav class="footer-nav" aria-label="Footer navigation"><a href="#product">Product</a><a href="#features">Features</a><a href="#technology">Technology</a><a href="#about">About</a><a href="https://github.com/Adelin23/half-story" data-github>GitHub<svg class="icon icon-small" aria-hidden="true"><use href="#i-external"/></svg></a></nav></div><div class="footer-bottom"><p>© 2026 Half Story. Independent student project.</p><div><span>Early-stage independent student project</span><span>Romania</span><!-- Public contact address supplied by the project creator. Keep CONFIG.email in sync. --><a class="email-placeholder" href="mailto:adelin.toader@student.upg-ploiesti.ro" data-email>adelin.toader@student.upg-ploiesti.ro</a></div></div></div></footer>
+  <div class="site-notice" id="site-notice" role="status" hidden><span id="notice-text"></span><button type="button" aria-label="Dismiss notice" id="dismiss-notice">×</button></div>
+</body>
+</html>
